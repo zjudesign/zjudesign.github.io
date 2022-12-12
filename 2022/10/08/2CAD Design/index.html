@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Minima -->
+  <!-- Hexo theme created by @adisaktijrs -->
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+
+  
+  <title>CAD</title>
+  
+  <link rel="canonical" href="https://zjudesign.github.io/2022/10/08/2CAD%20Design/">
+  
+  <meta name="description" content="Let’s make something mechanical!  How to build a car toy model step by step(in Fusion360)In this article, we will teach you how to build a car toy in ">
+  
+  
+  <meta name="author" content="BIG5">
+  
+  
+  
+  <meta property="og:site_name" content="BIG5" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="CAD" />
+  
+  <meta property="og:description" content="Let’s make something mechanical!  How to build a car toy model step by step(in Fusion360)In this article, we will teach you how to build a car toy in ">
+  
+  <meta property="og:url" content="https://zjudesign.github.io/2022/10/08/2CAD%20Design/" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CAD">
+  
+  <meta name="twitter:description" content="Let’s make something mechanical!  How to build a car toy model step by step(in Fusion360)In this article, we will teach you how to build a car toy in ">
+  
+  
+  
+  
+  <meta name="twitter:url" content="https://zjudesign.github.io/2022/10/08/2CAD%20Design/" />
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Preload fonts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="preload" href="/fonts/dm-serif-display-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+<link rel="stylesheet" href="/css/normalize.css">
+
+  
+<link rel="stylesheet" href="/css/skeleton.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+<link rel="stylesheet" href="/css/prism-dark.css">
+
+  
+<link rel="stylesheet" href="/css/prism-line-numbers.css">
+
+  <!-- User css -->
+  
+  
+<link rel="stylesheet" href="/css/user.css">
+
+  
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+
+  <!-- Custom Theme Color Style
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <style>
+  a:not(.icon) {
+    text-decoration-color: #0FA0CE;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 50%,
+      #0FA0CE 50%
+    );
+  }
+  blockquote {
+    border-left: 8px solid #0FA0CE;
+  }
+  .nanobar .bar {
+    background: #0FA0CE;
+  }
+  .button.button-primary:hover,
+  button.button-primary:hover,
+  input[type="submit"].button-primary:hover,
+  input[type="reset"].button-primary:hover,
+  input[type="button"].button-primary:hover,
+  .button.button-primary:focus,
+  button.button-primary:focus,
+  input[type="submit"].button-primary:focus,
+  input[type="reset"].button-primary:focus,
+  input[type="button"].button-primary:focus {
+    background-color: #0FA0CE;
+    border-color: #0FA0CE;
+  }
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="url"]:focus,
+  input[type="password"]:focus,
+  textarea:focus,
+  select:focus {
+    border: 1px solid #0FA0CE;
+  }
+</style>
+
+  <!-- Google Analytics (With Privacy Settings On)
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+
+  
+  <script src="/js/pic.min.js" defer></script>
+  
+
+  
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div>
+
+        <div class="row">
+  <div class="two columns" style="max-width: 50px">
+    <h1 class="mt-2 mode">
+      <div onclick=setDarkMode(true) id="darkBtn">🌑</div>
+      <div onclick=setDarkMode(false) id="lightBtn" class=hidden>☀️</div>
+      <script >
+        if (localStorage.getItem('preferredTheme') == 'dark') {
+          setDarkMode(true)
+        }
+        function setDarkMode(isDark) {
+          var darkBtn = document.getElementById('darkBtn')
+          var lightBtn = document.getElementById('lightBtn')
+          if (isDark) {
+            lightBtn.style.display = "block"
+            darkBtn.style.display = "none"
+            localStorage.setItem('preferredTheme', 'dark');
+          } else {
+            lightBtn.style.display = "none"
+            darkBtn.style.display = "block"
+            localStorage.removeItem('preferredTheme');
+          }
+          document.body.classList.toggle("darkmode");
+        }
+      </script>
+    </h1>
+  </div>
+
+  <div class="six columns ml-1">
+    <h1 class="mt-2">
+      Hi, Friends.
+    </h1>
+  </div>
+
+  <div class="twelve columns">
+    <div class="row">
+      <div class="nine columns left">
+        <a href="/">Home</a>
+        
+          
+          <a href="/about" class="ml">About Us</a>
+          
+        
+          
+          <a href="/archives" class="ml">All Works</a>
+          
+        
+          
+          <a href="/final" class="ml">Final Project</a>
+          
+        
+        
+      </div>
+    </div>
+    <hr style="margin-bottom: 2.6rem">
+  </div>
+</div>
+
+        <div class="trans">
+            <h1>CAD</h1>
+
+  <hr>
+<h1 id="Let’s-make-something-mechanical"><a href="#Let’s-make-something-mechanical" class="headerlink" title="Let’s make something mechanical!"></a>Let’s make something mechanical!</h1><iframe src="https://myhub.autodesk360.com/ue28cacf9/shares/public/SH35dfcQT936092f0e4313554f3c9bada7a2?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+
+<h2 id="How-to-build-a-car-toy-model-step-by-step-in-Fusion360"><a href="#How-to-build-a-car-toy-model-step-by-step-in-Fusion360" class="headerlink" title="How to build a car toy model step by step(in Fusion360)"></a>How to build a car toy model step by step(in Fusion360)</h2><p>In this article, we will teach you how to build a car toy in fusion360.</p>
+<p>First, click ‘create sketch’ button and choose the side plane to sketch.</p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221026222310.png"></p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221026222550.png"></p>
+<p> And then, draw a side view sketch of the car, you can try another shape you like. After finish sketching, click ‘FINISH SKETCH’ button.</p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221027003612.png"></p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221026222858.png"></p>
+<p>Then, use extrude command to create the body of the car. Click ‘OK’ of the extrude panel.</p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221027003853.png"></p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221026232741.png"></p>
+<p>Next, click the top surface of the car body, and we will sketch on it.</p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221026233415.png"></p>
+<p>And, create a plane offset the top surface of the body, draw a smaller  rectangle sketch on this plane.</p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221026233720.png"></p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221026233754.png"></p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221026234003.png"></p>
+<p>Use ‘Loft’ command to create the roof of the car, select the two sketches you just created, the click OK.</p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221027004024.png"></p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221026234128.png"></p>
+<p>Now we are almost done!</p>
+<p>click the right side of the car body, in this surface we will draw the wheels.</p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221026234848.png"></p>
+<p>Then, use extrude command again, but this time we will extrude inside the solid body. In this case, we extrude -10mm. </p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221026235809.png"></p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221027000021.png"></p>
+<p>After finish one side of the car, use ‘mirror’ command to copy the extrude feature.</p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221027000326.png"></p>
+<p>Then, create an axis of the wheel.</p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221027000747.png"></p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221027001917.png"></p>
+<p>Draw the sketch of the section of the wheel on the axis plane.</p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221027002052.png"></p>
+<p>Use ‘revolve’ command to create rim.</p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221027002312.png"></p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221027003507.png"></p>
+<p>And the same, to create the whole wheel.</p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221027002558.png"></p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221027002629.png"></p>
+<p>Finally. repeat the steps to create the rest wheels!</p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221027002853.png"></p>
+<p>And you can trying to add some other features to make your car cooler!</p>
+<p><img src="https://raw.githubusercontent.com/zjudesign/PicGo/main/20221027003332.png"></p>
+
+  <p> — Oct 8, 2022</p>
+  
+
+
+        </div>
+        <div class="row mt-2">
+  <h3>Search</h3>
+  <div><input id="search-text" title="search" class="search-text" type="text" placeholder="search......"></div>
+  <div style="margin-top: 1.5rem;">
+    <ul id="result"></ul>
+  </div>
+</div>
+        <div class="row mt-2">
+  
+    <div class="eight columns">
+      <p id="madewith">Made with ❤ and
+        <a class="footer-link icon" href="https://hexo.io" target="_blank" style="text-decoration: none;" rel="noreferrer" aria-label="Hexo.io">
+        <svg class="hexo svg-hov" width="14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Hexo.js</title><path d="M12 .007L1.57 6.056V18.05L12 23.995l10.43-6.049V5.952L12 .007zm4.798 17.105l-.939.521-.939-.521V12.94H9.08v4.172l-.94.521-.938-.521V6.89l.939-.521.939.521v4.172h5.84V6.89l.94-.521.938.521v10.222z"/></svg>
+        </a>
+        
+        at <a href="https://design.zju.edu.cn" target="_blank" rel="noreferrer">ZJU</a>.</p>
+        
+    </div>
+
+    <!-- Sepcial thanks to https://simpleicons.org/ for the icons -->
+    <div class="four columns mb-3 posisi" >
+      
+      <a class="ml-0 footer-link icon" href="https://github.com/zjudesign" target="_blank" style="text-decoration: none" rel="noreferrer" aria-label="GitHub">
+        <svg class="github svg-hov" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      </a>
+      
+
+      
+
+      
+
+      
+
+      
+
+    </div>
+  
+</div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <script src="/js/nanobar.min.js"></script>
+
+  <script>
+    var options = {
+      classname: 'nanobar',
+      id: 'myNanobar'
+    };
+    var nanobar = new Nanobar(options);
+    nanobar.go(30);
+    nanobar.go(76);
+    nanobar.go(100);
+  </script>
+
+</body>
+
+</html>
